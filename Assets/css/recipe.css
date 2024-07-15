@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2em;
+    color: #8e44ad;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+}
+
+nav a:hover {
+    color: #8e44ad;
+}
+
+nav .search-icon {
+    font-size: 1.2em;
+}
+
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.intro .highlight {
+    color: #8e44ad;
+    font-style: italic;
+}
+
+.featured-recipes {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card {
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recipe-card p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.recipe-categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category {
+    text-align: center;
+    margin: 10px;
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.category p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+.search-recipes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-recipes input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-recipes button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #8e44ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-recipes button:hover {
+    background-color: #732d91;
+}
