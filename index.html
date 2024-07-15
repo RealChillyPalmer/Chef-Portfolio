@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./Assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+<main>
+    <input type="text" id="recipeName" value="Recipe Name"><br><br>
+        <form name="Recipe List" id="listForm">
+
+        <label for="amountList">Amount: </label>
+        <select name="amountList" id="amountList" onChange="otherCheck()">
+            <option value=""></option>
+            <option value="1/5">1/5</option>;
+            <option value="1/4">1/4</option>;
+            <option value="1/3">1/3</option>;
+            <option value="2/5">2/5</option>;
+            <option value="1/2">1/2</option>;
+            <option value="3/5">3/5</option>;
+            <option value="2/3">2/3</option>;
+            <option value="3/4">3/4</option>;
+            <option value="4/5">4/5</option>;
+            <option value="1">1</option>;
+            <option value="other" id="otherAmount">Other</option>;
+        </select><br>
+        
+        <label for="otherAmountBox">Other Amount: </label>
+        <input type="hidden" id="otherAmountBox" value=""><br>
     
+        <label for="measureType">Measure Type: </label>
+        <select name="measureType" id="measureType">
+            <option>
+                <option value="Cup">Cup(s)</option>
+                <option value="flOz">Fluid OZ</option>
+                <option value="Gallon">Gallons</option>
+                <option value="Gram">Gram(s)</option>
+                <option value="Liter">Liter(s)</option>
+                <option value="ml">ml(s)</option>
+                <option value="Oz">Ounce(s)</option>
+                <option value="Pint">Pint(s)</option>
+                <option value="lb">Pound(s)</option>
+                <option value="Quart">Quart(s)</option>
+                <option value="Tbs">Tablespoon(s)</option>
+                <option value="Tsp">Teaspoon(s)</option>           
+        </select><br>
+    
+        <label for="ingredient">Ingredient: </label>
+        <input type="text" id="ingredient" value="Of?"><br>
+
+        <label for="addButton">Add Ingredient To Your List:</label>
+        <button type="button" id="addButton">Add </button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="subButton"></label>
+        <button type="submit" id="subButton">Go To Recipe Directions</button>
+
+        <aside id="ingredientCard"></aside>
+
+        <script>
+
+            let amountList = document.getElementById('amountList').value;
+            const otherAmount = document.querySelector('#otherAmount');
+            const otherBox = document.querySelector('#otherAmountBox');
+            
+            const otherCheck = function () {
+                const amountSel = document.getElementById('amountList').value;
+                const oAmountBox = document.querySelector('#otherAmountBox');
+               
+                if (amountSel === 'other') {
+
+                    oAmountBox.type = 'text';
+                  
+                } else {
+
+                    oAmountBox.type = 'hidden';
+                }
+            }    
+        </script>
+    </form> 
+</main>
+
+<form name="Recipe Instructions" id="recipeInstructions">
+    
+   <label for="recipeInput">Recipe Instructions:</label>
+    <h3 id="userRecipeList"></h3>
+    <textarea name="recipeInput" id="recipeInput" type="text">Add Your Recipe Here:</textarea>
+    
+    <label for="addToCookbook"></label><br>
+    <button type="submit" id="addToCookbook">Add to Cookbook </button>
+
+    <label for="recipeImg">Add and Image:</label>
+    <input type="url" id="recipeImg">
+
+</form>
+<style>
+    #recipeInstructions {
+        display: none;
+    }
+</style>
+
+
+
+
 </body>
+<footer>
+<a href="./userCookBook.html">
+    <label for="goToCookbook"></label><br>
+    <button type="button" id="goToCookbook">My Cookbook </button>
+</a>
+</footer>
+
+
+<script src="./Assets/js/script.js"></script>
 </html>

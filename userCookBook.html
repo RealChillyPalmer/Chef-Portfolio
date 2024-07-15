@@ -6,7 +6,7 @@
     <title>Chef Recipe</title>
     <link rel="stylesheet" href="Assets/css/recipe.css">
 </head>
-<body>
+
     <header>
         <div class="logo">
             <h1>Recipes Book</h1>
@@ -19,6 +19,9 @@
             <a href="#"><i class="search-icon">🔍</i></a>
         </nav>
     </header>
+
+    <body onload='render()'>
+        <div id="cookBookSec"></div>
     <section class="intro">
         <p>Crafting exquisite dishes with passion and precision, <span class="highlight">tailored for every culinary enthusiast!</span></p>
     </section>
@@ -82,5 +85,7 @@
         <input type="text" placeholder="Search our recipes">
         <button>+ View All Recipes</button>
     </section>
-</body>
+
+    <script src="./Assets/js/formslogic.js"></script>
+    </body>;
 </html>
