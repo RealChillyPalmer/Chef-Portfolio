@@ -52,14 +52,14 @@
             <label for="ingredient">Ingredient: </label>
             <input type="text" id="ingredient" value="Of?"><br>
     
-            <label for="addButton"></label>
+            <label for="addButton">Add Ingredient To Your List:</label>
             <button type="button" id="addButton">Add </button>
             <br>
             <br>
             <br>
             <br>
             <label for="subButton"></label>
-            <button type="submit" id="subButton">Submit </button>
+            <button type="submit" id="subButton">Go To Recipe Directions</button>
 
             <aside id="ingredientCard"></aside>
     
@@ -85,8 +85,8 @@
             </script>
         </form> 
     </main>
-<script src="./Assets/js/script.js"></script>
-</html>
+
+
 
 
 
@@ -96,18 +96,36 @@
 
     
 
-    <Form name="Recipe Instructions" id="recipeInstructions">
-
-        **Add ingredient list that was just created**
+    <form name="Recipe Instructions" id="recipeInstructions">
         
        <label for="recipeInput">Recipe Instructions:</label>
-        <textarea name="reccipeInput" type="text">Add Your Recipe Here:</textarea>
+        <h3 id="userRecipeList"></h3>
+        <textarea name="recipeInput" id="recipeInput" type="text">Add Your Recipe Here:</textarea>
         
         <label for="addToCookbook"></label><br>
         <button type="submit" id="addToCookbook">Add to Cookbook </button>
 
     </Form>
+    <style>
+        #recipeInstructions {
+            display: none;
+        }
+    </style>
 
+    
+
+
+</body>
+<footer>
+    <a href="./index.html">
+        <label for="goToCookbook"></label><br>
+        <button type="button" id="goToCookbook">My Cookbook </button>
+    </a>
+</footer>
+
+
+    <script src="./Assets/js/script.js"></script>
+    </html>
 
 
 
